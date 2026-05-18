@@ -1,0 +1,24 @@
+// ColaTranslate native engine integration (macOS).
+// Mirrors ios/Flutter/ColaTranslate.xcconfig: force-loads the combined static
+// archive so every llama.cpp / ggml symbol survives dead-code-stripping and
+// is reachable via `DynamicLibrary.process()` from Dart FFI.
+//
+// We build the combined archive arm64-only (Apple Silicon), so restrict the
+// Runner target to arm64 too — otherwise Flutter's default universal build
+// produces an x86_64 slice that silently drops every symbol from our archive.
+
+ARCHS                 = arm64
+VALID_ARCHS           = arm64
+ONLY_ACTIVE_ARCH      = YES
+
+COLA_LIB_DIR = $(SRCROOT)/Frameworks
+
+HEADER_SEARCH_PATHS  = $(inherited) $(SRCROOT)/../native
+LIBRARY_SEARCH_PATHS = $(inherited) $(COLA_LIB_DIR)
+// `-force_load` pulls every object out of our archive, but the macOS linker
+// still strips externs that nothing in the Flutter binary references at
+// link time. Dart FFI resolves them at runtime via `dlsym`, so we keep them
+// alive with `-u` (force-undefined). Unlike `-exported_symbol`, `-u` does
+// NOT restrict the export table — it only marks the symbol as required so
+// dead-strip leaves it in.
+OTHER_LDFLAGS        = $(inherited) -force_load $(COLA_LIB_DIR)/libcola_combined.a -lc++ -framework Accelerate -framework Foundation -Wl,-u,_cola_init -Wl,-u,_cola_is_ready -Wl,-u,_cola_translate -Wl,-u,_cola_free_string -Wl,-u,_cola_shutdown

@@ -1,0 +1,13 @@
+// ColaTranslate native engine integration.
+// Picks the correct XCFramework slice (device vs simulator) and force-loads
+// the combined static archive so every llama.cpp / ggml symbol survives the
+// linker's dead-code-stripping.
+
+COLA_XCF_DIR = $(SRCROOT)/Frameworks/ColaTranslate.xcframework
+
+COLA_SLICE_DIR[sdk=iphoneos*]      = $(COLA_XCF_DIR)/ios-arm64
+COLA_SLICE_DIR[sdk=iphonesimulator*] = $(COLA_XCF_DIR)/ios-arm64-simulator
+
+HEADER_SEARCH_PATHS  = $(inherited) $(COLA_SLICE_DIR)/Headers
+LIBRARY_SEARCH_PATHS = $(inherited) $(COLA_SLICE_DIR)
+OTHER_LDFLAGS        = $(inherited) -force_load $(COLA_SLICE_DIR)/libcola_combined.a -lc++ -framework Accelerate -framework Foundation

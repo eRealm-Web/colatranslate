@@ -1,0 +1,60 @@
+PODS:
+  - audioplayers_darwin (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - Flutter (1.0.0)
+  - flutter_onnxruntime (0.0.1):
+    - Flutter
+    - onnxruntime-objc (= 1.22.0)
+  - onnxruntime-c (1.22.0)
+  - onnxruntime-objc (1.22.0):
+    - onnxruntime-objc/Core (= 1.22.0)
+  - onnxruntime-objc/Core (1.22.0):
+    - onnxruntime-c (= 1.22.0)
+  - record_ios (1.2.0):
+    - Flutter
+  - sherpa_onnx_ios (1.13.2):
+    - Flutter
+  - supertonic_flutter (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - audioplayers_darwin (from `.symlinks/plugins/audioplayers_darwin/darwin`)
+  - Flutter (from `Flutter`)
+  - flutter_onnxruntime (from `.symlinks/plugins/flutter_onnxruntime/ios`)
+  - record_ios (from `.symlinks/plugins/record_ios/ios`)
+  - sherpa_onnx_ios (from `.symlinks/plugins/sherpa_onnx_ios/ios`)
+  - supertonic_flutter (from `.symlinks/plugins/supertonic_flutter/ios`)
+
+SPEC REPOS:
+  trunk:
+    - onnxruntime-c
+    - onnxruntime-objc
+
+EXTERNAL SOURCES:
+  audioplayers_darwin:
+    :path: ".symlinks/plugins/audioplayers_darwin/darwin"
+  Flutter:
+    :path: Flutter
+  flutter_onnxruntime:
+    :path: ".symlinks/plugins/flutter_onnxruntime/ios"
+  record_ios:
+    :path: ".symlinks/plugins/record_ios/ios"
+  sherpa_onnx_ios:
+    :path: ".symlinks/plugins/sherpa_onnx_ios/ios"
+  supertonic_flutter:
+    :path: ".symlinks/plugins/supertonic_flutter/ios"
+
+SPEC CHECKSUMS:
+  audioplayers_darwin: f15e209a3e856d1a7edcf98dc029f484fead2242
+  Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
+  flutter_onnxruntime: 10fc424fe0dee257c621c8c3f2eb6c29556e7135
+  onnxruntime-c: 7f778680e96145956c0a31945f260321eed2611a
+  onnxruntime-objc: 83d28b87525bd971259a66e153ea32b5d023de19
+  record_ios: 26294aaa39e4bb7665b0fef78bdc23d723b432f2
+  sherpa_onnx_ios: 9f536d001daeaca36fc812fa1b1234870df3bc91
+  supertonic_flutter: e76006bfbe41d7f49911bc365666bbf073b4ab53
+
+PODFILE CHECKSUM: b662a7202b97e77a404e1a11c36e523af668321a
+
+COCOAPODS: 1.16.2

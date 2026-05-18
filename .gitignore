@@ -1,0 +1,73 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Externalized runtime assets
+/assets/models/*.gguf
+/assets/models/sense-voice-zh-en-ja-ko-yue-int8-2024-07-17/model.int8.onnx
+/assets/models/sense-voice-zh-en-ja-ko-yue-int8-2024-07-17/silero_vad.onnx
+/assets/models/sense-voice-zh-en-ja-ko-yue-int8-2024-07-17/tokens.txt
+/assets/onnx/duration_predictor.onnx
+/assets/onnx/text_encoder.onnx
+/assets/onnx/tts.json
+/assets/onnx/unicode_indexer.json
+/assets/onnx/vector_estimator.onnx
+/assets/onnx/vocoder.onnx
+/assets/voice_styles/F1.json
+/assets/voice_styles/F2.json
+/assets/voice_styles/F3.json
+/assets/voice_styles/F4.json
+/assets/voice_styles/F5.json
+/assets/voice_styles/M1.json
+/assets/voice_styles/M2.json
+/assets/voice_styles/M3.json
+/assets/voice_styles/M4.json
+/assets/voice_styles/M5.json
+
+# Keep asset directory documentation tracked
+!/assets/models/README.md
+!/assets/models/sense-voice-zh-en-ja-ko-yue-int8-2024-07-17/README.md
+!/assets/onnx/README.md
+!/assets/voice_styles/README.md
