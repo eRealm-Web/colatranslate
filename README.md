@@ -31,6 +31,7 @@
 - 系统总览：[docs/system-overview.md](docs/system-overview.md)
 - 技术架构：[docs/technical-architecture.md](docs/technical-architecture.md)
 - 平台与构建说明：[docs/platform-build-notes.md](docs/platform-build-notes.md)
+- AI 共创复盘：[docs/ai-build-journey.md](docs/ai-build-journey.md)
 
 ## 当前实现摘要
 
